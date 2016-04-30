@@ -1,5 +1,5 @@
+[![Build Status](https://travis-ci.org/EsteveAguilera/PrettyStrings.svg?branch=master)](https://travis-ci.org/EsteveAguilera/PrettyStrings)
 [![Coverage Status](https://coveralls.io/repos/EsteveAguilera/PrettyStrings/badge.svg?branch=master)](https://coveralls.io/r/EsteveAguilera/PrettyStrings?branch=master)
-
 # PrettyStrings
 
 A small library to give some prettiness to your project strings!
