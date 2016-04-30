@@ -6,10 +6,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 public class PrettyStringTest {
-    private String allCapsString = "JUST A SAMPLE STRING";
-    private String allLowCaseString = "just a sample string";
-    private String mixedCasesString = "jUSt a SAMplE stRInG";
-    private String mixedCasesWithSpacesString = " JusT A sampLE sTrIng ";
 
     private PrettyString prettyString;
 
@@ -19,47 +15,72 @@ public class PrettyStringTest {
     }
 
     @Test
-    public void shouldCapitalizeFirstLetter() throws Exception {
-
-        String expectedResult = "Just a sample string";
-
-        assertTrue(prettyString.capitalizeFirstLetter(allCapsString).equals(expectedResult));
-        assertTrue(prettyString.capitalizeFirstLetter(allLowCaseString).equals(expectedResult));
-        assertTrue(prettyString.capitalizeFirstLetter(mixedCasesString).equals(expectedResult));
-        assertTrue(prettyString.capitalizeFirstLetter(mixedCasesWithSpacesString).equals(expectedResult));
+    public void shouldCapitalizeFirstLetter_whenPrettifyingAllCapsString() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter("JUST A SAMPLE STRING").equals("Just a sample string"));
     }
 
     @Test
-    public void shouldCapitalizeFirstLetterOfEveryWord() throws Exception {
-
-        String expectedResult = "Just A Sample String";
-
-        assertTrue(prettyString.capitalizeAllFirstLetters(allCapsString).equals(expectedResult));
-        assertTrue(prettyString.capitalizeAllFirstLetters(allLowCaseString).equals(expectedResult));
-        assertTrue(prettyString.capitalizeAllFirstLetters(mixedCasesString).equals(expectedResult));
-        assertTrue(prettyString.capitalizeAllFirstLetters(mixedCasesWithSpacesString).equals(expectedResult));
+    public void shouldCapitalizeFirstLetter_whenPrettifyingAllLowerCaseString() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter("just a sample string").equals("Just a sample string"));
     }
 
     @Test
-    public void shouldReturnSameValue_ifStringIsNullOrEmpty() throws Exception {
-        String nullString = null;
-        String emptyString = "";
-        String oneSpaceString = " ";
-
-        assertTrue(prettyString.capitalizeFirstLetter(nullString) == nullString);
-        assertTrue(prettyString.capitalizeFirstLetter(emptyString).equals(emptyString));
-        assertTrue(prettyString.capitalizeFirstLetter(oneSpaceString).equals(oneSpaceString));
-
-        assertTrue(prettyString.capitalizeAllFirstLetters(nullString) == nullString);
-        assertTrue(prettyString.capitalizeAllFirstLetters(emptyString).equals(emptyString));
-        assertTrue(prettyString.capitalizeAllFirstLetters(oneSpaceString).equals(oneSpaceString));
+    public void shouldCapitalizeFirstLetter_whenPrettifyingMixedCasesString() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter("jUSt a SAMplE stRInG").equals("Just a sample string"));
     }
 
     @Test
-    public void shouldReturnSameValue_ifHasNoLetters() throws Exception {
-        String noLettersString = "42- !·$";
+    public void shouldCapitalizeFirstLetter_whenPrettifyingMixedCasesWithSpacesString() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter(" JusT A sampLE sTrIng ").equals("Just a sample string"));
+    }
 
-        assertTrue(prettyString.capitalizeFirstLetter(noLettersString).equals(noLettersString));
-        assertTrue(prettyString.capitalizeAllFirstLetters(noLettersString).equals(noLettersString));
+    @Test
+    public void shouldCapitalizeFirstLetterOfEveryWord_whenPrettifyingAllCapsString() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters("JUST A SAMPLE STRING").equals("Just A Sample String"));
+    }
+
+    @Test
+    public void shouldCapitalizeFirstLetterOfEveryWord_whenPrettifyingAllLowerCaseString() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters("just a sample string").equals("Just A Sample String"));
+    }
+
+    @Test
+    public void shouldCapitalizeFirstLetterOfEveryWord_whenPrettifyingMixedCasesString() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters("jUSt a SAMplE stRInG").equals("Just A Sample String"));
+    }
+
+    @Test
+    public void shouldCapitalizeFirstLetterOfEveryWord_whenPrettifyingMixedCasesWithSpacesString() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters(" JusT A sampLE sTrIng ").equals("Just A Sample String"));
+    }
+
+    @Test
+    public void capitalizeFirstLetterShouldReturnSameValue_ifStringIsNull() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter(null) == null);
+    }
+
+    @Test
+    public void capitalizeFirstLetterShouldReturnSameValue_ifStringIsEmpty() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter("").equals(""));
+    }
+
+    @Test
+    public void capitalizeAllFirstLettersShouldReturnSameValue_ifStringIsNull() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters(null) == null);
+    }
+
+    @Test
+    public void capitalizeAllFirstLettersShouldReturnSameValue_ifStringIsEmpty() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters("").equals(""));
+    }
+
+    @Test
+    public void capitalizeFirstLetterShouldReturnSameValue_ifHasNoLetters() throws Exception {
+        assertTrue(prettyString.capitalizeFirstLetter("42- !·$").equals("42- !·$"));
+    }
+
+    @Test
+    public void capitalizeAllFirstLettersShouldReturnSameValue_ifHasNoLetters() throws Exception {
+        assertTrue(prettyString.capitalizeAllFirstLetters("42- !·$").equals("42- !·$"));
     }
 }
