@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/EsteveAguilera/PrettyStrings/badge.svg?branch=master)](https://coveralls.io/r/EsteveAguilera/PrettyStrings?branch=master)
+
 # PrettyStrings
 
 A small library to give some prettiness to your project strings!
