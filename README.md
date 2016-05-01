@@ -31,19 +31,26 @@ String otherResult = prettyString.capitalizeAllFirstLetters(uglyString); // => "
 
 Download
 --------
-- Grab via maven:
-```maven
+- Grab via Gradle
+```groovy
+repositories { jcenter() }
+
+compile 'com.fewlaps.prettystrings:fewlaps-prettystrings:1.0'
+````
+
+- Grab via Maven:
+```xml
+<repository>
+  <id>jcenter</id>
+  <url>http://jcenter.bintray.com</url>
+</repository>
+
 <dependency>
   <groupId>com.fewlaps.prettystrings</groupId>
   <artifactId>fewlaps-prettystrings</artifactId>
   <version>1.0</version>
   <type>pom</type>
 </dependency>
-````
-
-- Grab via gradle
-```gradle
-compile 'com.fewlaps.prettystrings:fewlaps-prettystrings:1.0'
 ````
 
 ## LICENSE ##
