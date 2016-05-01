@@ -2,12 +2,21 @@
 [![Coverage Status](https://coveralls.io/repos/EsteveAguilera/PrettyStrings/badge.svg?branch=master)](https://coveralls.io/r/EsteveAguilera/PrettyStrings?branch=master)
 # PrettyStrings
 
-A small library to give some prettiness to your project strings!
+PrettyStrings is a small library to give some prettiness to your project strings!
 
-Have you ever worked with an API that gives you strings like "HOLIDAYS" or "holidays" when you expected something more ready to use like "Holidays"?
+Have you ever worked with an API that gives you strings like: 
+
+**"HOLIDAYS"** or **"holidays"** when you expected something more ready to use like **"Holidays"**?
+
+or an uppercase name like **"JOHN DOE"** when you wanted **"John Doe"**?
+
+We've been in those situations and that's why we developed this small library!
+
+Oh, and we developed it using TDD!
 
 The Sample
 ----------
+Here's a short code to show you how to use it:
 
 ```java
 String uglyString = "JUST A SAMPLE STRING";
