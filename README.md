@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Fewlaps/PrettyStrings.svg?branch=master)](https://travis-ci.org/EsteveAguilera/PrettyStrings)
-[![Coverage Status](https://coveralls.io/repos/EsteveAguilera/PrettyStrings/badge.svg?branch=master)](https://coveralls.io/r/EsteveAguilera/PrettyStrings?branch=master)
+[![Coverage Status](https://coveralls.io/repos/Fewlaps/PrettyStrings/badge.svg?branch=master)](https://coveralls.io/r/Fewlaps/PrettyStrings?branch=master)
 [![Download](https://api.bintray.com/packages/fewlaps/maven/fewlaps-prettystrings/images/download.svg) ](https://bintray.com/fewlaps/maven/fewlaps-prettystrings/_latestVersion)
 # PrettyStrings
 
