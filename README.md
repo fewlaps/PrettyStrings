@@ -29,6 +29,23 @@ String result = prettyString.capitalizeFirstLetter(uglyString); // => "Just a sa
 String otherResult = prettyString.capitalizeAllFirstLetters(uglyString); // => "Just A Sample String"
 ```
 
+Download
+--------
+- Grab via maven:
+```maven
+<dependency>
+  <groupId>com.fewlaps.prettystrings</groupId>
+  <artifactId>fewlaps-prettystrings</artifactId>
+  <version>1.0</version>
+  <type>pom</type>
+</dependency>
+````
+
+- Grab via gradle
+```gradle
+compile 'com.fewlaps.prettystrings:fewlaps-prettystrings:1.0'
+````
+
 ## LICENSE ##
 
 The MIT License (MIT)
