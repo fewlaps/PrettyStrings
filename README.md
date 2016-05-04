@@ -24,9 +24,9 @@ String uglyString = "JUST A SAMPLE STRING";
 
 PrettyString prettyString = new PrettyString();
 
-String result = prettyString.capitalizeFirstLetter(uglyString); // => "Just a sample string"
+String result = prettyString.capitalizeFirstChar(uglyString); // => "Just a sample string"
 
-String otherResult = prettyString.capitalizeAllFirstLetters(uglyString); // => "Just A Sample String"
+String otherResult = prettyString.capitalizeAllFirstChars(uglyString); // => "Just A Sample String"
 ```
 
 Download
