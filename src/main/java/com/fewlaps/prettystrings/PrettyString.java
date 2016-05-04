@@ -2,7 +2,7 @@ package com.fewlaps.prettystrings;
 
 public class PrettyString {
 
-    public String capitalizeFirstLetter(String input) {
+    public String capitalizeFirstChar(String input) {
         if (input == null || input.trim().equals("")) {
             return input;
         }
@@ -12,7 +12,7 @@ public class PrettyString {
         return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
 
-    public String capitalizeAllFirstLetters(String input) {
+    public String capitalizeAllFirstChars(String input) {
         if (input == null || input.trim().equals("")) {
             return input;
         }
