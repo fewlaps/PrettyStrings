@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNull;
 
 public class PrettyStringTest {
 
@@ -56,7 +57,7 @@ public class PrettyStringTest {
 
     @Test
     public void capitalizeFirstCharShouldReturnSameValue_ifStringIsNull() throws Exception {
-        assertTrue(prettyString.capitalizeFirstChar(null) == null);
+        assertNull(prettyString.capitalizeFirstChar(null));
     }
 
     @Test
@@ -66,7 +67,7 @@ public class PrettyStringTest {
 
     @Test
     public void capitalizeAllFirstCharsShouldReturnSameValue_ifStringIsNull() throws Exception {
-        assertTrue(prettyString.capitalizeAllFirstChars(null) == null);
+        assertNull(prettyString.capitalizeAllFirstChars(null));
     }
 
     @Test
