@@ -29,4 +29,12 @@ public class PrettyString {
 
         return new String(charArray);
     }
+
+    public String addColon(String input) {
+        if (input == null || input.trim().equals("")) {
+            return input;
+        }
+
+        return input.trim().concat(":");
+    }
 }

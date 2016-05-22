@@ -33,6 +33,15 @@ public class PrettyStringTest {
     }
 
     @Test
+    public void addColonShouldReturnSameValue_ifStringIsNull() throws Exception {
+        String input = null;
+
+        String output = prettyString.addColon(input);
+
+        assertThat(output).isNull();
+    }
+
+    @Test
     public void shouldCapitalizeFirstChar_whenPrettifyingAllCapsString() throws Exception {
         String input = "JUST A SAMPLE STRING";
         String expectedOutput = "Just a sample string";
@@ -131,6 +140,15 @@ public class PrettyStringTest {
     }
 
     @Test
+    public void addColonShouldReturnSameValue_ifStringIsEmpty() throws Exception {
+        String input = "";
+
+        String output = prettyString.addColon(input);
+
+        assertThat(output).isEqualTo(input);
+    }
+
+    @Test
     public void capitalizeFirstCharShouldReturnSameValue_ifHasNoLetters() throws Exception {
         String input = "42- !·$";
 
@@ -146,5 +164,15 @@ public class PrettyStringTest {
         String output = prettyString.capitalizeAllFirstChars(input);
 
         assertThat(output).isEqualTo(input);
+    }
+
+    @Test
+    public void addColonShouldAddColon_whenUsingAValidString() throws Exception {
+        String input = "Some text";
+        String expectedOutput = "Some text:";
+
+        String output = prettyString.addColon(input);
+
+        assertThat(output).isEqualTo(expectedOutput);
     }
 }
