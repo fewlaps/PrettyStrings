@@ -1,5 +1,7 @@
 package com.fewlaps.prettystrings;
 
+import java.util.StringTokenizer;
+
 public class PrettyString {
 
     public String capitalizeFirstChar(String input) {
@@ -62,5 +64,21 @@ public class PrettyString {
 
     private boolean endsWith(String input, char endsWith) {
         return input.charAt(input.length() - 1) == endsWith;
+    }
+
+    public String getFirstWords(String input, int numberOfWords) {
+        if (input == null || input.trim().equals("")) {
+            return "";
+        }
+        StringTokenizer st = new StringTokenizer(input, " ");
+        if (st.countTokens() <= numberOfWords) {
+            return input;
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < numberOfWords; i++) {
+                sb.append(st.nextToken() + " ");
+            }
+            return sb.toString().trim();
+        }
     }
 }
