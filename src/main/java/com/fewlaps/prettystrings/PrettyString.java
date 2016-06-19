@@ -37,4 +37,30 @@ public class PrettyString {
 
         return input.trim().concat(":");
     }
+
+    public String removeEndingPeriod(String input) {
+        return removeEnding(input, '.');
+    }
+
+    public String removeEndingColons(String input) {
+        return removeEnding(input, ':');
+    }
+
+    public String removeEndingSemiColons(String input) {
+        return removeEnding(input, ';');
+    }
+
+    private String removeEnding(String input, char endsWith) {
+        if (input == null || input.trim().equals("")) {
+            return "";
+        }
+        if (endsWith(input, endsWith)) {
+            return input.substring(0, input.length() - 1);
+        }
+        return input;
+    }
+
+    private boolean endsWith(String input, char endsWith) {
+        return input.charAt(input.length() - 1) == endsWith;
+    }
 }
