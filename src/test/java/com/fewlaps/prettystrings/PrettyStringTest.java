@@ -150,7 +150,7 @@ public class PrettyStringTest {
 
     @Test
     public void capitalizeFirstCharShouldReturnSameValue_ifHasNoLetters() throws Exception {
-        String input = "42- !·$";
+        String input = "42- !$";
 
         String output = prettyString.capitalizeFirstChar(input);
 
@@ -159,7 +159,7 @@ public class PrettyStringTest {
 
     @Test
     public void capitalizeAllFirstCharsShouldReturnSameValue_ifHasNoLetters() throws Exception {
-        String input = "42- !·$";
+        String input = "42- !$";
 
         String output = prettyString.capitalizeAllFirstChars(input);
 
