@@ -35,7 +35,7 @@ Download
 ```groovy
 repositories { jcenter() }
 
-compile 'com.fewlaps.prettystrings:fewlaps-prettystrings:1.0'
+compile 'com.fewlaps.prettystrings:fewlaps-prettystrings:1.1'
 ````
 
 - Grab via Maven:
@@ -48,7 +48,7 @@ compile 'com.fewlaps.prettystrings:fewlaps-prettystrings:1.0'
 <dependency>
   <groupId>com.fewlaps.prettystrings</groupId>
   <artifactId>fewlaps-prettystrings</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <type>pom</type>
 </dependency>
 ````
