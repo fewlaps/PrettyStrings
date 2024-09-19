@@ -1,40 +1,22 @@
 group 'com.fewlaps.prettystrings'
-version '1.1-SNAPSHOT'
+version '1.2'
 
 apply plugin: 'java'
-apply plugin: 'com.novoda.bintray-release'
-apply plugin: 'cobertura'
-apply plugin: 'com.github.kt3k.coveralls'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-    testCompile 'org.assertj:assertj-core:2.4.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.11'
+    testImplementation 'org.assertj:assertj-core:2.4.1'
 }
 
 buildscript {
     repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'net.saliman:gradle-cobertura-plugin:2.0.0' // cobertura plugin
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
-        classpath 'com.novoda:bintray-release:0.3.4'
+        mavenCentral()
     }
 }
-
-publish {
-    userOrg = 'fewlaps'
-    groupId = 'com.fewlaps.prettystrings'
-    artifactId = 'fewlaps-prettystrings'
-    publishVersion = '1.1'
-    desc = 'A small library to give some prettiness to your project strings!'
-    website = 'https://github.com/Fewlaps/PrettyStrings'
-}
-
-cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report
